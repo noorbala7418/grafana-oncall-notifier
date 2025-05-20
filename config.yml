@@ -1,0 +1,12 @@
+---
+log_level: info
+
+email_server:
+  host: mail.domain.com
+  port: 465
+  username: user@domain.com
+  password: "password"
+
+grafana_oncall:
+  url: https://oncall.domain.com
+  admin_token: admin_token
