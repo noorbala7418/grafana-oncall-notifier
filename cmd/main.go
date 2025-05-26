@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"log"
 	"net/http"
 	"os"
 	"strings"
@@ -276,7 +275,6 @@ func convertTimeBasedOnTimeZone(currentTime string, timePattern string, targetTi
 
 	localLoc, err := time.LoadLocation(targetTimezone)
 	if err != nil {
-		log.Fatal(`Failed to load location "Local"`)
 		logrus.Error("function convertTimeBasedOnTimeZone: Failed to load location. err: ", err)
 		return "", fmt.Errorf("function convertTimeBasedOnTimeZone: Failed to load location. err: %w", err)
 	}
